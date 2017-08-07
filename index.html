@@ -6,10 +6,74 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+        <script src="app.js" async></script>
     </head>
     <body>
-            
 
+        <h1>SGP - Saisie des coordonnées bancaires</h1>
+
+        <div class="container">
+            <div class="row">
+                <!-- tableau de collaborateurs -->
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <table class="table table-striped table-bordered" id="tableJs">
+                        <thead>
+                            <tr>
+                                <th>Matricule</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- géré par le javascript : voir app.js -> listerCollaborateurs() -->
+                        </tbody>
+                    </table>
+                </div>
+
+                    <!-- formulaire de sauvegarde des données bancaires -->
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="banque">Banque</label>  
+                            <div class="col-md-4">
+                                <input id="banque" name="banque" placeholder="" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="bic">BIC</label>  
+                            <div class="col-md-4">
+                                <input id="bic" name="bic" placeholder="" class="form-control input-md" required="" type="text">
+                                <span class="help-block">(maximum 11 caractères)</span>  
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="iban">IBAN</label>  
+                            <div class="col-md-4">
+                                <input id="iban" name="iban" placeholder="" class="form-control input-md" required="" type="text">
+                                <span class="help-block">(maximum 34 caractères)</span>  
+                                </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="saveBanque"></label>
+                            <div class="col-md-4">
+                                <button id="saveBanque" name="saveBanque" class="btn btn-default">Sauvegarder</button>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
